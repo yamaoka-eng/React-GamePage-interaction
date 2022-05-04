@@ -1,0 +1,223 @@
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  // height: 100%;
+  color: #fff;
+  background-color: #0f0e13;
+  background-image: 
+  radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+  radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  .left {
+    position: relative;
+    flex-shrink:0;
+    .date {
+      width: 250px;
+      display: flex;
+      position: fixed;
+      justify-content: center;
+      align-items: center;
+      .date-list {
+        width: 60%;
+        li {
+          line-height: 28px;
+          a {
+            color: #fff;
+            text-decoration: none;
+            h3 {
+              padding: 14px 14px 14px 0;
+              font-weight: 200;
+              position: relative;
+              transition: 0.5s;
+              color: rgba(255,255,255,.5);
+            }
+            h3::before {
+              content: "";
+              width: 0;
+              height: 2px;
+              background: #fff;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              transition: 0.5s;
+            }
+          }
+        }
+        li:hover h3{
+          font-weight: 400;
+          padding-left: 40px;
+          font-size: 28px;
+          color: #ffa178;
+        }
+        li:hover h3::before {
+          width: 30px;
+          background: #ffa178;
+        }
+      }
+    }
+    .release {
+      position: fixed;
+      left: 250px;
+      top: 30%;
+      width: 100px;
+      height: 50px;
+      transform: rotate(-90deg);
+    }
+  }
+  .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  // 大于1400px
+  @media only screen and (min-width: 1400px) {
+    .left {
+      width: 400px;
+    }
+  }
+  // 小于1400px
+  @media only screen and (max-width: 1400px) {
+    .left {
+      width: 200px;
+      .date {
+        display: none;
+      }
+      .release {
+        left: 50px;
+      }
+    }
+  }
+  @media only screen and (max-width: 1240px) {
+    .left {
+      width: 0px;
+      .release {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+/* 宽度大于768px */
+@media only screen and (min-width: 870px) {
+  .nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 3rem;
+    z-index: 10;
+    .mini-nav-icon {
+      display: none;
+    }
+    .logo {
+      width: 242px;
+      height: 57px;
+      margin: 0;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        padding: 0 1.2rem;
+        color: #fff;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all ease 0.6s;
+      }
+      li:hover {
+        transform: scale(1.4) rotate(3deg);
+      }
+    }
+  }
+}
+
+/* 宽度小于870px */
+@media only screen and (max-width: 870px) {
+  .nav {
+    position: relative;
+    width: 100%;
+    max-height: 48px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    backdrop-filter:saturate(180%) blur(10px);
+    background-color:rgba(0,0,0,.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    overflow: hidden;
+    transition: ease 0.8s;
+    .mini-nav-icon {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 48px;
+      width: 45px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .br {
+        width: 20px;
+        height: 2px;
+        background-color: rgba(255,255,255,.7);
+        transition: all .3s;
+      }
+      .fist {
+        margin-bottom: 10px;
+      }
+      .fist.rotate {
+        transform: translateY(6px) rotate(-45deg);
+      }
+      .last.rotate{
+        transform: translateY(-6px) rotate(45deg);
+      }
+
+    }
+    .logo {
+      height: 45px;
+      img {
+        height: 100%;
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      li {
+        padding: 2rem 1rem;
+        color: #fff;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all ease 0.6s;
+      }
+      li:hover {
+        transform: scale(1.4) rotate(3deg);
+      }
+    }
+  }
+  .navActive {
+    max-height: 1000px;
+    backdrop-filter:saturate(100%) blur(10px);
+  }
+  .container {
+    margin-top: 48px;
+  }
+}

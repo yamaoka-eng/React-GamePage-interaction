@@ -1,0 +1,170 @@
+.section {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  padding-bottom: 20%;
+  transition: all 0.5s;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  .card {
+    height: 405px;
+    min-width: 720px;
+    position: relative;
+    .card-shadow {
+      width: 120%;
+      height: 120%;
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      // background: attr(data-text) no-repeat center;
+      filter: blur(40px);
+      background-size: cover;
+      z-index: 0;
+    }
+    .card-role {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+      // background: url(../../assets/images/destiny-role.png) no-repeat;
+      background-size: cover;
+    }
+    .card-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 30px;
+      // background: url(../../assets/images/destiny-card.png) no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+    .time {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 5;
+      top: 5%;
+      left: -30%;
+      h1 {
+        font-size: 80px;
+        font-weight: 300;
+      }
+      span {
+        display: block;
+        transform: rotate(-90deg);
+        color: blueviolet;
+      }
+    }
+    .des {
+      width: 100%;
+      height: 60px;
+      position: absolute;
+      bottom: 0;
+      left: -80px;
+      z-index: 2;
+      h3 {
+        font-size: 42px;
+        padding-bottom: 20px;
+        width: 55%;
+        font-weight: 400;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: 2px;
+        color: rgba($color: #fff, $alpha: 0.5);
+      }
+    }
+    .btn {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #ffa178;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -50px;
+      z-index: 2;
+      transition: 0.5s;
+      cursor: pointer;
+      h3 {
+        position: absolute;
+        color: #fff;
+        font-size: 32px;
+        font-weight: 400;
+        transition: 0.5s;
+        padding-left: 50%;
+        padding-top: 50%;
+      }
+    }
+    .btn:hover{
+      border: 2px solid blueviolet;
+      transform-origin: 20px 20px;
+      transform-origin: center;
+      transform: scale(1.1) translate(-5%,-40%);
+    }
+    .btn:hover h3 {
+      transform: scale(1.05) translate(5%,0%);
+    }
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .section {
+    padding-left: 150px;
+  }
+  .section::before {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .section {
+    width: 95%;
+    padding-left: 0;
+    .card {
+      height: 0;
+      width: 100%;
+      min-width: 250px;
+      padding-bottom: 56%;
+      .time {
+        top: -3rem;
+        left: 2rem;
+        font-size: 1rem;
+        h1 {
+          font-size: 4rem;
+        }
+        span {
+          transform: rotate(0);
+          font-size: 1.5rem;
+        }
+      }
+      .btn {
+        height: 4.5rem;
+        width: 4.5rem;
+        right: 2rem;
+        top: 80%;
+        h3 {
+          font-size: 1.3rem;
+        }
+      }
+      .des {
+        left: 10%;
+        width: 80%;
+        h3 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

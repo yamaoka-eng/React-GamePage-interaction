@@ -1,0 +1,1 @@
+export const getImage = (imgUrl) => new URL(`/src/assets/images/${imgUrl}`, import.meta.url).href
