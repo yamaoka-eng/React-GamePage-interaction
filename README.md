@@ -1,2 +1,8 @@
 # React-GamePage-interaction
-超级炫酷游戏发布页面交互效果
+The project requires nodejs environment to run
+
+project run:
+
+1.npm i/yarn install
+2.npm run dev/yarn dev
+
