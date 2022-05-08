@@ -67,7 +67,7 @@ const Card = ({data}) => {
       onReverseComplete: () => setIsScrollT(false),
       scrollTrigger: cardScrollTrigger
     })
-    const animation2 = gsap.to(q('.card-role'), {x: '-5%', duration: 1, scrollTrigger: cardScrollTrigger})
+    const animation2 = gsap.to(q('.card-role'), {x: '-5%', scale: 1.2, transformOrigin: "bottom", duration: 1, scrollTrigger: cardScrollTrigger})
     const animation3 = gsap.to(q('.des'), {x: '10%', y: '30%', ease: 'ease-in', duration: 0.8, scrollTrigger: cardScrollTrigger})
     return () => {
       animation1.scrollTrigger.kill()
@@ -99,7 +99,7 @@ const Card = ({data}) => {
     if (isLoading) return
     setIsEnter(true)
     gsap.to(q('.card-bg'), {rotateX: '45deg', skewX: '-25deg', transformOrigin: 'bottom', duration: 1, onStart: () => setIsEnter(true) })
-    gsap.to(q('.card-role'), {x: '-5%', duration: 1})
+    gsap.to(q('.card-role'), {x: '-5%', scale: 1.2, transformOrigin: "bottom", duration: 1})
     gsap.to(q('.des'), {x: '10%', y: '30%', ease: 'ease-in', duration: 0.8})
   }
 
@@ -108,7 +108,7 @@ const Card = ({data}) => {
     if (isLoading) return
     setIsEnter(true)
     gsap.to(q('.card-bg'), {rotateX: '0', skewX: '0', transformOrigin: 'bottom', duration: 1, onComplete: () => setIsEnter(false) })
-    gsap.to(q('.card-role'), {x: 0, duration: 1})
+    gsap.to(q('.card-role'), {x: 0, scale: 1, duration: 1})
     gsap.to(q('.des'), {x: '0', y: '0', duration: 0.8})
   }
 
