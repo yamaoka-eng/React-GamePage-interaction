@@ -46,8 +46,6 @@ const Card = ({ data }) => {
 
   const q = gsap.utils.selector(el);
 
-  console.log(getImage(data.background));
-
   const [isScrollT, setIsScrollT] = useState(false);
   const [isEnter, setIsEnter] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
