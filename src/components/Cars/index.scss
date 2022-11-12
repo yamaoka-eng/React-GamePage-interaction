@@ -20,7 +20,7 @@
       position: absolute;
       top: -10%;
       left: -10%;
-      // background: attr(data-text) no-repeat center;
+      background: attr(data-text) no-repeat center;
       filter: blur(40px);
       background-size: cover;
       z-index: 0;
@@ -30,7 +30,6 @@
       width: 100%;
       position: absolute;
       z-index: 2;
-      // background: url(../../assets/images/destiny-role.png) no-repeat;
       background-size: cover;
     }
     .card-bg {
@@ -104,14 +103,14 @@
         padding-top: 50%;
       }
     }
-    .btn:hover{
+    .btn:hover {
       border: 2px solid blueviolet;
       transform-origin: 20px 20px;
       transform-origin: center;
-      transform: scale(1.1) translate(-5%,-40%);
+      transform: scale(1.1) translate(-5%, -40%);
     }
     .btn:hover h3 {
-      transform: scale(1.05) translate(5%,0%);
+      transform: scale(1.05) translate(5%, 0%);
     }
   }
 }

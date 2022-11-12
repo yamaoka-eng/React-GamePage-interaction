@@ -189,21 +189,21 @@ const Card = ({ data }) => {
         <div
           className="card-shadow"
           style={{
-            background: `${getImage(data.background)}) no-repeat`,
+            background: `url(${getImage(data.background)}) no-repeat`,
             backgroundSize: "cover",
           }}
         ></div>
         <div
           className="card-role"
           style={{
-            background: `${getImage(data.role)} no-repeat`,
+            background: `url(${getImage(data.role)}) no-repeat`,
             backgroundSize: "cover",
           }}
         ></div>
         <div
           className="card-bg"
           style={{
-            background: `${getImage(data.role)} no-repeat`,
+            background: `url(${getImage(data.background)}) no-repeat`,
             backgroundSize: "cover",
           }}
         ></div>
